@@ -1,0 +1,154 @@
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x85e: file p5final.c, line 36.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2-3/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5final.c:36
+36   x=input();
+(gdb) s
+input () at p5final.c:4
+4   {
+(gdb) n
+6    printf("Enter any number to Find GCD \n");
+(gdb) n
+Enter any number to Find GCD 
+7    scanf("%d",&n);
+(gdb) n
+12
+8    return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p5final.c:37
+37   y=input();
+(gdb) n
+Enter any number to Find GCD 
+16
+38   z=gcd(x,y);
+(gdb) p a
+No symbol "a" in current context.
+(gdb) s
+gcd (a=12, b=16) at p5final.c:13
+13   large=a>b?a:b;
+(gdb) p larfe
+No symbol "larfe" in current context.
+(gdb) n
+14   small=a<b?a:b;
+(gdb) p large
+$1 = 16
+(gdb) p small
+$2 = 16
+(gdb) n
+15   rem=1;
+(gdb) p large
+$3 = 16
+(gdb) p small
+$4 = 12
+(gdb) n
+16   i=1;
+(gdb) p rem
+$5 = 1
+(gdb) n
+17   while(rem)
+(gdb) p rem
+$6 = 1
+(gdb) n
+19     rem=large-i*small;
+(gdb) p large
+$7 = 16
+(gdb) p i
+$8 = 1
+(gdb) p small
+$9 = 12
+(gdb) n
+20     if(rem<small)
+(gdb) n
+22       large=small;
+(gdb) p large
+$10 = 16
+(gdb) n
+23       small=rem;
+(gdb) p small
+$11 = 12
+(gdb) p large
+$12 = 12
+(gdb) p rem
+$13 = 4
+(gdb) n
+25     i++;
+(gdb) p i
+$14 = 1
+(gdb) n
+17   while(rem)
+(gdb) p i
+$15 = 2
+(gdb) p rem
+$16 = 4
+(gdb) n
+19     rem=large-i*small;
+(gdb) p large
+$17 = 12
+(gdb) p small
+$18 = 4
+(gdb) n
+20     if(rem<small)
+(gdb) p i
+$19 = 2
+(gdb) p rem
+$20 = 4
+(gdb) n
+25     i++;
+(gdb) p small
+$21 = 4
+(gdb) p large
+$22 = 12
+(gdb) n
+17   while(rem)
+(gdb) p i
+$23 = 3
+(gdb) p large
+$24 = 12
+(gdb) p small
+$25 = 4
+(gdb) n
+19     rem=large-i*small;
+(gdb) n
+20     if(rem<small)
+(gdb) p i
+$26 = 3
+(gdb) n
+22       large=small;
+(gdb) p large
+$27 = 12
+(gdb) n
+23       small=rem;
+(gdb) p rem
+$28 = 0
+(gdb) p small
+$29 = 4
+(gdb) n
+25     i++;
+(gdb) p i
+$30 = 3
+(gdb) n
+17   while(rem)
+(gdb) n
+27   return large;
+(gdb) n
+28  }
+(gdb) n
+main () at p5final.c:39
+39   output(x,y,z);
+(gdb) s
+output (a=12, b=16, gcd=4) at p5final.c:31
+31   printf("GCD of %d , %d is :%d \n",a,b,gcd);
+(gdb) n
+GCD of 12 , 16 is :4 
+32  }
+(gdb) n
+main () at p5final.c:40
+40   return 0;
+(gdb) c
+Continuing.
