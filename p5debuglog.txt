@@ -1,4 +1,4 @@
-Reading symbols from a.out...done.
+
 (gdb) b main
 Breakpoint 1 at 0x85e: file p5final.c, line 36.
 (gdb) r
