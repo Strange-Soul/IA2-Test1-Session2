@@ -1,19 +1,18 @@
 #include<stdio.h>
-
 int input()
 {
  int n;
- printf("Enter any number to Find GCD \n");
+ printf("Enter any Number \n");
  scanf("%d",&n);
  return n;
 }
 int gcd(int a,int b)
 {
- int large,small,rem,i;
+ int large,small,i,rem;
  large=a>b?a:b;
  small=a<b?a:b;
- rem=1;
  i=1;
+ rem=1;
  while(rem)
  {
    rem=large-i*small;
@@ -21,6 +20,7 @@ int gcd(int a,int b)
    {
      large=small;
      small=rem;
+     i=0;
    }
    i++;
  }
@@ -28,7 +28,7 @@ int gcd(int a,int b)
 }
 void output(int a,int b,int gcd)
 {
- printf("GCD of %d , %d is :%d \n",a,b,gcd);
+ printf("GCD of %d ,%d is: %d\n",a,b,gcd);
 }
 int main()
 {
@@ -39,3 +39,9 @@ int main()
  output(x,y,z);
  return 0;
 }
+
+
+
+
+
+
