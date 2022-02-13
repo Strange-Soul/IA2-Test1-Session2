@@ -1,0 +1,161 @@
+(gdb) b main
+Breakpoint 1 at 0x8f9: file p4final.c, line 42.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2-4/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4final.c:42
+42  {
+(gdb) n
+44   x=input_array_size();
+(gdb) s
+input_array_size () at p4final.c:4
+4   {
+(gdb) n
+6    printf("Enter size of Array \n");
+(gdb) n
+Enter size of Array 
+7    scanf("%d",&n);
+(gdb) n
+5
+8    return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p4final.c:45
+45   int y[x];
+(gdb) n
+46   input_array(x,y);
+(gdb) s
+input_array (n=5, a=0x7ffd8b590510) at p4final.c:12
+12   printf("Enter Array Elements \n");
+(gdb) n
+Enter Array Elements 
+13   for(int i=0;i<n;i++)
+(gdb) p i
+$1 = 22094
+(gdb) n
+14   scanf("%d",&a[i]);
+(gdb) n
+1
+13   for(int i=0;i<n;i++)
+(gdb) p i
+$2 = 0
+(gdb) n
+14   scanf("%d",&a[i]);
+(gdb) p i
+$3 = 1
+(gdb) n
+2
+13   for(int i=0;i<n;i++)
+(gdb) n
+14   scanf("%d",&a[i]);
+(gdb) p i
+$4 = 2
+(gdb) n
+7
+13   for(int i=0;i<n;i++)
+(gdb) n
+14   scanf("%d",&a[i]);
+(gdb) p i
+$5 = 3
+(gdb) n
+8
+13   for(int i=0;i<n;i++)
+(gdb) n
+14   scanf("%d",&a[i]);
+(gdb) p i
+$6 = 4
+(gdb) n
+12
+13   for(int i=0;i<n;i++)
+(gdb) n
+15  }
+(gdb) p i
+No symbol "i" in current context.
+(gdb) n
+main () at p4final.c:47
+47   z=sum_composite_numbers(x,y);
+(gdb) s
+sum_composite_numbers (n=5, a=0x7ffd8b590510) at p4final.c:27
+27    int i,sum=0;
+(gdb) p i
+$7 = -1644165536
+(gdb) p sum
+$8 = 5
+(gdb) n
+28   for(i=0;i<n;i++)
+(gdb) p i
+$9 = -1644165536
+(gdb) n
+30     if(is_composite(a[i])==1)
+(gdb) p is_composite
+$10 = {int (int)} 0x564e9e000819 <is_composite>
+(gdb) n
+28   for(i=0;i<n;i++)
+(gdb) p i
+$11 = 0
+(gdb) p is_composite
+$12 = {int (int)} 0x564e9e000819 <is_composite>
+(gdb) n
+30     if(is_composite(a[i])==1)
+(gdb) p i
+$13 = 1
+(gdb) p is_composite
+$14 = {int (int)} 0x564e9e000819 <is_composite>
+(gdb) n
+28   for(i=0;i<n;i++)
+(gdb) p is_composite
+$15 = {int (int)} 0x564e9e000819 <is_composite>
+(gdb) p n
+$16 = 5
+(gdb) n
+30     if(is_composite(a[i])==1)
+(gdb) p a[i]
+$17 = 7
+(gdb) n
+28   for(i=0;i<n;i++)
+(gdb) p i
+$18 = 2
+(gdb) n
+30     if(is_composite(a[i])==1)
+(gdb) p a[i]
+$19 = 8
+(gdb) n
+32     sum+=a[i];
+(gdb) p sum
+$20 = 0
+(gdb) n
+28   for(i=0;i<n;i++)
+(gdb) p sum
+$21 = 8
+(gdb) n
+30     if(is_composite(a[i])==1)
+(gdb) p a[i]
+$22 = 12
+(gdb) n
+32     sum+=a[i];
+(gdb) p sum
+$23 = 8
+(gdb) n
+28   for(i=0;i<n;i++)
+(gdb) p sum
+$24 = 20
+(gdb) n
+35   return sum;
+(gdb) n
+36  }
+(gdb) n
+main () at p4final.c:48
+48   out_put(z);
+(gdb) s
+out_put (sum=20) at p4final.c:39
+39   printf("Sum of n Composite numbers is : %d \n",sum);
+(gdb) n
+Sum of n Composite numbers is : 20 
+40  }
+(gdb) n
+main () at p4final.c:49
+49   return 0;;
+(gdb) c
+Continuing.
