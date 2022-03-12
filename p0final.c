@@ -1,22 +1,30 @@
 #include<stdio.h>
-void input(float *base,float *height)
+void input_string(char *a)
 {
-  printf("Enter the Base and height of Triangle\n");
-  scanf("%f %f",base,height);
+  printf("Enter the String \n");
+  scanf("%s",a);
 }
-void find_area(float base,float height,float *area)
+void str_reverse(char *a,char *rev)
 {
-  *area=0.5*base*height;
+  int i,j;
+  for(i=0;a[i]!='\0';i++);
+      i--;
+      for(j=0;a[j]!='\0';j++)
+        {
+          rev[j]=a[i];
+          i--;
+        }
+      rev[j]='\0';
 }
-void output(float base,float height,float area)
+void output(char *a,char *reverse)
 {
- printf("Area of Triangle is %f \n",area);
+  printf("Reverse of String %s is %s \n",a,reverse);
 }
 int main()
 {
- float x,y,z;
- input(&x,&y);
- find_area(x,y,&z);
- output(x,y,z);
- return 0;
+  char s1[20],s2[20];
+  input_string(s1);
+  str_reverse(s1,s2);
+  output(s1,s2);
+  return 0;
 }
