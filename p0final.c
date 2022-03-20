@@ -1,24 +1,34 @@
 #include<stdio.h>
-void input(float *b,float *h)
+int input_number()
 {
-  printf("Enter the base of triangle \n");
-  scanf("%f",b);
-  printf("Enter the height of triangle \n");
-  scanf("%f",h);
+  int n;
+  printf("Enter a number to check Composite number or not !!! \n");
+  scanf("%d",&n);
+  return n;
 }
-void find_area(float b,float h,float *area)
+int is_composite(int n)
 {
-  *area=0.5*b*h;
+  for(int i=2;i<n;i++)
+    {
+      if(n%i==0)
+        return 1;
+    }
+  return 0;
 }
-void output(float b,float h,float area)
+void output(int n,int composite)
 {
-  printf("A triangle having base=%f and height=%f having area =%f\n",b,h,area);
+  if(composite==1)
+  {
+    printf("%d is composite number \n",n);
+  }
+  else
+    printf("%d is not composite number \n",n);
 }
 int main()
 {
-  float base,height,area;
-  input(&base,&height);
-  find_area(base,height,&area);
-  output(base,height,area);
+  int n,result;
+  n=input_number();
+  result=is_composite(n);
+  output(result,n);
   return 0;
 }

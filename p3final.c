@@ -8,7 +8,7 @@ int input_number()
 }
 int is_composite(int n)
 {
- int i,c;
+ int i;
  for(i=2;i<n;i++)
  {
    if((n%i)==0)
