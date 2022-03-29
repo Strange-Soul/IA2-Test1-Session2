@@ -63,7 +63,7 @@ void output(char *a)
 int main()
 {
   char s[40];
-  input_string(s);
+c;  input_string(s);
   str_reverse(s);
   output(s);
   return 0;
