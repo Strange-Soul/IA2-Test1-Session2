@@ -52,8 +52,7 @@ void str_reverse(char *a)
       a[i]=a[j];
       a[j]=s;
       i++;
-      j--;
-      
+      j--; 
     }
 }
 void output(char *a)
