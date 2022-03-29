@@ -42,7 +42,7 @@ int main()
 
 
 
-/*#include<stdio.h>
+#include<stdio.h>
 int input()
 {
  int n;
